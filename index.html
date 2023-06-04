@@ -1,1 +1,128 @@
-<object data="/form_test.html" width="100%" height="100%"></object>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Admission Form</title>
+    <style>
+        .logo-img {
+            width: 150px;
+            height: 150px;
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+        }
+
+        .root {
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            padding: 20px;
+            display: block;
+            flex-direction: column;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        #schoolname {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #address {
+            font-size: 10px;
+        }
+
+        .column {
+            display: flexbox;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="root">
+        <div class="row">
+            <img class="logo-img" src="https://4.imimg.com/data4/EA/UE/ANDROID-9039016/product-500x500.jpeg"
+                alt="School Logo">
+            <div class="column">
+                <h1 id="schoolname"></h1>
+                <h5 id="address"></h5>
+                <div class="row" id="#contactrow">
+                    <h6>email :- </h6>
+                    <h6 id="schoolemail"> </h6>
+                    <h6></h6>
+                    <h6 id="contact"></h6>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        document.getElementById('schoolname').innerHTML = "R.D. Gyan Niketan"
+        document.getElementById('address').innerHTML = "B-650, Mittal Market, 40 Feet Road, Hind Vihar, Prem Nagar-III, Kirari Delhi-86";
+        document.getElementById('contact').innerHTML = "+1234567890";
+        document.getElementById('schoolemail').innerHTML = "rdgyanniketan@gmail.com";
+        document.getElementById('firstname').innerHTML = "John";
+        document.getElementById('middlename').innerHTML = "Micheal";
+        document.getElementById('lastname').innerHTML = "Doe";
+        document.getElementById('class').innerHTML = "10";
+        document.getElementById('section').innerHTML = "(B)";
+        document.getElementById('mobilenumber').innerHTML = "1234567890";
+        document.getElementById('admissionno').innerHTML = "RPS/ABC/123";
+        document.getElementById('email').innerHTML = "student@gmail.com";
+        document.getElementById('gender').innerHTML = "Male";
+        document.getElementById('community').innerHTML = "Community XYZ";
+        document.getElementById('dob').innerHTML = "1990-01-01";
+        document.getElementById('religion').innerHTML = "Hindu";
+        document.getElementById('nationality').innerHTML = "Indian";
+        document.getElementById('bloodgroup').innerHTML = "A+";
+        document.getElementById('aadharno').innerHTML = "1234567890";
+        document.getElementById('language').innerHTML = "English";
+        document.getElementById('weight').innerHTML = "70";
+        document.getElementById('height').innerHTML = "175";
+        document.getElementById('birthplace').innerHTML = "Delhi";
+        document.getElementById('hobby').innerHTML = "Reading";
+        document.getElementById('rtecategory').innerHTML = "Yes";
+        document.getElementById('staffchild').innerHTML = "No";
+        document.getElementById('ews').innerHTML = "Yes";
+        document.getElementById('physicallychallenged').innerHTML = "No";
+        document.getElementById('fathername').innerHTML = "John Doe";
+        document.getElementById('fatherqualification').innerHTML = "Bachelor's Degree";
+        document.getElementById('fathermobileno').innerHTML = "+1234567890";
+        document.getElementById('fatheroccupation').innerHTML = "Engineer";
+        document.getElementById('fatherannualincome').innerHTML = "$50,000";
+        document.getElementById('mothername').innerHTML = "Jane Doe";
+        document.getElementById('motherqualification').innerHTML = "Bachelor's Degree";
+        document.getElementById('mothermobileno').innerHTML = "+1234567890";
+        document.getElementById('motheroccupation').innerHTML = "Engineer";
+        document.getElementById('motherannualincome').innerHTML = "$50,000";
+        document.getElementById('guardianname').innerHTML = "John Smith";
+        document.getElementById('guardianqualification').innerHTML = "Master's Degree";
+        document.getElementById('guardianmobileno').innerHTML = "+1234567890";
+        document.getElementById('guardianoccupation').innerHTML = "Doctor";
+        document.getElementById('guardianannualincome').innerHTML = "$100,000";
+    </script>
+</body>
+
+</html>
