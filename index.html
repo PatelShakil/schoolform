@@ -8,50 +8,88 @@
     <title>School Admission Form</title>
     <style>
         .logo-img {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             -webkit-clip-path: circle(50% at 50% 50%);
             clip-path: circle(50% at 50% 50%);
         }
 
         .root {
+            text-decoration-color: #8c8cf7;
             margin: 0 auto;
+            padding: 10px;
             background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            margin-right: 20px;
+            display: block;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         body {
             padding: 20px;
-            display: block;
-            flex-direction: column;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f8f8f8;
+            width: max-content;
         }
 
         .row {
             display: flex;
-            flex-direction: row;
             align-items: center;
+            flex-direction: row;
         }
 
         #schoolname {
-            font-size: 20px;
+            font-size: 60px;
             text-align: center;
         }
 
         #address {
-            font-size: 10px;
+            font-size: 20px;
+            font-weight: light;
         }
 
         .column {
-            display: flexbox;
             flex-direction: column;
             align-items: center;
             text-align: center;
+        }
+
+        .contactrow {
+            font-size: 20px;
+        }
+
+        #sessionrow {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .stack {
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            height: 200px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #999;
+            margin: 10px;
+        }
+        .detail-text{
+            font-size: 20px;
+            align-items: center;
+        }
+        .detail-column{
+            display: flex;
+            flex-direction: column;
+        }
+        .detail-value{
+            border-bottom:2px solid #080808;
+                width: max-content;
         }
     </style>
 
@@ -59,19 +97,67 @@
 
 <body>
     <div class="root">
-        <div class="row">
+        <div class="row" style="border-bottom: 2px dotted #080808; 
+        width: fit-content;
+        height: 250px;">
             <img class="logo-img" src="https://4.imimg.com/data4/EA/UE/ANDROID-9039016/product-500x500.jpeg"
                 alt="School Logo">
             <div class="column">
                 <h1 id="schoolname"></h1>
-                <h5 id="address"></h5>
-                <div class="row" id="#contactrow">
-                    <h6>email :- </h6>
-                    <h6 id="schoolemail"> </h6>
-                    <h6></h6>
-                    <h6 id="contact"></h6>
-                </div>
+                <p id="address"></p>
+                <p class="contactrow">
+                    <strong>Email :- </strong>
+                    <span id="schoolemail"></span>
+                    <strong>Contact :- </strong>
+                    <span id="contact"></span>
+                </p>
             </div>
+        </div>
+        <p id="sessionrow">
+            Session : 20<span id="startyear" style="text-decoration: underline;"></span>
+            <span>-</span>
+            20<span id="endyear" style="text-decoration: underline;"></span>
+        </p>
+        <div class="row" style="
+        justify-content: space-between;
+        align-items: center;
+        ">
+            <div class="column" style="
+            padding-left: 40px;
+            ">
+                <p style="
+                    border: 3px dotted green;
+                    padding: 5px;
+                    width: max-content;
+                    ">
+                    <strong style="color: red;">Admission No. : </strong><span id="admissionno"></span>
+                </p>
+
+                <p style="padding: 5px;
+                background-color: green;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;">
+                    APPLICATION FORM FOR ADMISSION
+                </p>
+            </div>
+            <div class="stack">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5IddEo4v2q0IiSOwomPKuW9MZir6McjitNw&usqp=CAU"
+                    alt="Add your Image" style="align-items: center;">
+            </div>
+        </div>
+        <div class="detail-column">
+            <p class="detail-text">
+                <strong>Name of Student : </strong> 
+                <span class="detail-value"
+                id="firstname" ></span>
+            </p>
+            <p class="detail-text">
+                <strong>Date of Birth : </strong> 
+                <span class="detail-value"
+                id="dob" ></span>
+            </p>
+            
         </div>
 
     </div>
@@ -83,13 +169,15 @@
         document.getElementById('address').innerHTML = "B-650, Mittal Market, 40 Feet Road, Hind Vihar, Prem Nagar-III, Kirari Delhi-86";
         document.getElementById('contact').innerHTML = "+1234567890";
         document.getElementById('schoolemail').innerHTML = "rdgyanniketan@gmail.com";
+        document.getElementById('startyear').innerHTML = "23";
+        document.getElementById('endyear').innerHTML = "24";
+        document.getElementById('admissionno').innerHTML = "RPS/ABC/123";
         document.getElementById('firstname').innerHTML = "John";
         document.getElementById('middlename').innerHTML = "Micheal";
         document.getElementById('lastname').innerHTML = "Doe";
         document.getElementById('class').innerHTML = "10";
         document.getElementById('section').innerHTML = "(B)";
         document.getElementById('mobilenumber').innerHTML = "1234567890";
-        document.getElementById('admissionno').innerHTML = "RPS/ABC/123";
         document.getElementById('email').innerHTML = "student@gmail.com";
         document.getElementById('gender').innerHTML = "Male";
         document.getElementById('community').innerHTML = "Community XYZ";
