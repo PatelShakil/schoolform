@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-container {
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            display: block;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            margin-right: 5px;
+            color: #333;
+        }
+
+        .form-row {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+
+        .form-value {
+            font-weight: lighter;
+            font-size: 16px;
+            color: #333;
+            padding: 3px;
+            border-bottom: 1px solid #222222;
+        }
+
+        .form-spacer {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .header-row {
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+
+        .school-name {
+            text-align: center;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-image: url("data:image/jpeg;base64,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");
+            background-size: cover;
+            top: 0;
+            left: 0;
+            margin-bottom: 10px;
+        }
+
+        .column {
+            display: block;
+            text-align: center;
+            margin-left: 10px;
+
+        }
+
+        .school-address {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .school-contact {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .image-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .image-row-item {
+            display: flex;
+            align-items: end;
+            width: calc(100%);
+        }
+
+        .stack img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .stack {
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            height: 200px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #999;
+        }
+
+        .form-part-container {
+            justify-content: center;
+        }
+
+        .form-row-line {
+            justify-content: space-around;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .new-row {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            width: calc(100% / 3);
+        }
+
+        .item-3-row-container {
+            display: block;
+            justify-content: space-between;
+        }
+
+        .centered-label {
+            display: block;
+            text-align: center;
+            border-top: 1px dotted #999;
+            border-bottom: 1px dotted #999;
+            padding: 10px 0;
+            font-size: 22px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .item-2-row {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            width: calc(100% / 3);
+        }
+
+        .parents-name-row {
+            text-align: start;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            padding-bottom: 5px;
+        }
+        .form-body-container{
+            display: block;
+            align-items: center;
+            width: calc(100%);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="form-container">
+        <div class="header-row">
+            <div class="logo"></div>
+            <div class="column">
+                <div class="school-name">
+                    Gahak-Narulas Elementary School
+                </div>
+                <label class="school-address" style="margin-bottom : 10px;" id="address">
+                </label>
+                <div class="row">
+                    <label style="text-align: center; font-size: 15px; font-weight: bold;">Contact :
+                    </label>
+                    <label class="school-contact" id="contact">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <!-- Mobile and Email -->
+
+        <div class="form-body-container">
+            <div class="image-row">
+                <div class="image-row-item">
+                    <div class="column">
+                        <div class="form-row">
+                            <label class="form-label" for="name">First Name : </label>
+                            <label class="form-value" type="text" id="firstname">studentname</label>
+                        </div>
+                        <div class="form-row">
+                            <label class="form-label" for="name">Middle Name : </label>
+                            <label class="form-value" type="text" id="middlename">studentname</label>
+                        </div>
+                        <div class="form-row">
+                            <label class="form-label" for="name">Last Name : </label>
+                            <label class="form-value" type="text" id="lastname">studentname</label>
+                        </div>
+                        <div class="form-row">
+                            <label class="form-label" for="name">Class : </label>
+                            <label class="form-value" type="text" id="class">class</label>
+                            <span class="form-spacer"></span>
+                            <label class="form-value" type="text" id="section">section</label>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-label">Phone No. : </div>
+                            <div class="form-value" id="mobilenumber"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-label">Email :</div>
+                            <div class="form-value" id="email"></div>
+                        </div>
+                        <div class="form-row">
+                            <label for="" class="form-label" id="key">Addmission No. :</label>
+                            <label for="" class="form-value" id="admissionno"></label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="image-row-item">
+                    <div class="stack">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5IddEo4v2q0IiSOwomPKuW9MZir6McjitNw&usqp=CAU"
+                            alt="Add your Image" class="img">
+                    </div>
+                </div>
+            </div>
+            <label class="centered-label">Personal Info</label>
+            <div class="item-3-row-container">
+                <!-- Personal Info -->
+                <div class="form-row-line">
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">Gender :</label>
+                        <label for="" class="form-value" id="gender"></label>
+                    </div>
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">Community :</label>
+                        <label for="" class="form-value" id="community"></label>
+                    </div>
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">DOB :</label>
+                        <label for="" class="form-value" id="dob"></label>
+                    </div>
+                </div>
+
+                <div class="form-row-line">
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">Religion :</label>
+                        <label for="" class="form-value" id="religion"></label>
+                    </div>
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">Nationality :</label>
+                        <label for="" class="form-value" id="nationality"></label>
+                    </div>
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">BloodGroup :</label>
+                        <label for="" class="form-value" id="bloodgroup"></label>
+                    </div>
+                </div>
+                <div class="form-row-line">
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">Aadhar No. :</label>
+                        <label for="" class="form-value" id="aadharno"></label>
+                    </div>
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">Language :</label>
+                        <label for="" class="form-value" id="language"></label>
+                    </div>
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">Weight(KG) :</label>
+                        <label for="" class="form-value" id="weight"></label>
+                    </div>
+                </div>
+                <div class="form-row-line">
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">Height(CM) :</label>
+                        <label for="" class="form-value" id="height"></label>
+                    </div>
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">Birthplace :</label>
+                        <label for="" class="form-value" id="birthplace"></label>
+                    </div>
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">Hobby :</label>
+                        <label for="" class="form-value" id="hobby"></label>
+                    </div>
+                </div>
+                <div class="form-row-line">
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">RTE Category :</label>
+                        <label for="" class="form-value" id="rtecategory"></label>
+                    </div>
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">Staff :</label>
+                        <label for="" class="form-value" id="staffchild"></label>
+                    </div>
+                    <div class="new-row">
+                        <label for="" class="form-label" id="key">EWS :</label>
+                        <label for="" class="form-value" id="ews"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="new-row" style="display: flex; align-items: center;">
+                <label for="" class="form-label" id="key">Differently able :</label>
+                <label for="" class="form-value" id="physicallychallenged"></label>
+            </div>
+            <label class="centered-label">Parents Info</label>
+
+            <div class="form-part-container">
+                <!-- Parents Info -->
+                <div class="parents-name-row">
+                    <label for="" class="form-label" id="key">Father's Name :</label>
+                    <label for="" class="form-value" id="fathername"></label>
+                </div>
+                <div class="form-row-line">
+                    <div class="item-2-row">
+                        <label for="" class="form-label" id="key">Father's Qualification :</label>
+                        <label for="" class="form-value" id="fatherqualification"></label>
+                    </div>
+                    <div class="item-2-row">
+                        <label for="" class="form-label" id="key">Father's Mobile No. :</label>
+                        <label for="" class="form-value" id="fathermobileno"></label>
+                    </div>
+                </div>
+                <div class="form-row-line">
+                    <div class="item-2-row">
+                        <label for="" class="form-label" id="key">Father's Occupation :</label>
+                        <label for="" class="form-value" id="fatheroccupation"></label>
+                    </div>
+                    <div class="item-2-row">
+                        <label for="" class="form-label" id="key">Father's Annual Income :</label>
+                        <label for="" class="form-value" id="fatherannualincome"></label>
+                    </div>
+                </div>
+
+                <div class="parents-name-row">
+                    <label for="" class="form-label" id="key">Mother's Name :</label>
+                    <label for="" class="form-value" id="mothername"></label>
+                </div>
+
+                <div class="form-row-line">
+                    <div class="item-2-row">
+                        <label for="" class="form-label" id="key">Mother's Qualification :</label>
+                        <label for="" class="form-value" id="motherqualification"></label>
+                    </div>
+                    <div class="item-2-row">
+                        <label for="" class="form-label" id="key">Mother's Mobile No. :</label>
+                        <label for="" class="form-value" id="mothermobileno"></label>
+                    </div>
+                </div>
+                <div class="form-row-line">
+                    <div class="item-2-row">
+                        <label for="" class="form-label" id="key">Mother's Occupation :</label>
+                        <label for="" class="form-value" id="motheroccupation"></label>
+                    </div>
+                    <div class="item-2-row">
+                        <label for="" class="form-label" id="key">Mother's Annual Income :</label>
+                        <label for="" class="form-value" id="motherannualincome"></label>
+                    </div>
+                </div>
+                <div class="parents-name-row">
+                    <label for="" class="form-label" id="key">Guardian's Name :</label>
+                    <label for="" class="form-value" id="guardianname"></label>
+                </div>
+                <div class="form-row-line">
+                    <div class="item-2-row">
+                        <label for="" class="form-label" id="key">Guardian's Qualification :</label>
+                        <label for="" class="form-value" id="guardianqualification"></label>
+                    </div>
+                    <div class="item-2-row">
+                        <label for="" class="form-label" id="key">Guardian's Mobile No. :</label>
+                        <label for="" class="form-value" id="guardianmobileno"></label>
+                    </div>
+                </div>
+                <div class="form-row-line">
+                    <div class="item-2-row">
+                        <label for="" class="form-label" id="key">Guardian's Occupation :</label>
+                        <label for="" class="form-value" id="guardianoccupation"></label>
+                    </div>
+                    <div class="item-2-row">
+                        <label for="" class="form-label" id="key">Guardian's Annual Income :</label>
+                        <label for="" class="form-value" id="guardianannualincome"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script>
+            document.getElementById('firstname').innerHTML = "John";
+            document.getElementById('middlename').innerHTML = "Micheal";
+            document.getElementById('lastname').innerHTML = "Doe";
+            document.getElementById('class').innerHTML = "10";
+            document.getElementById('section').innerHTML = "(B)";
+            document.getElementById('mobilenumber').innerHTML = "1234567890";
+            document.getElementById('admissionno').innerHTML = "RPS/ABC/123";
+            document.getElementById('email').innerHTML = "student@gmail.com";
+            document.getElementById('gender').innerHTML = "Male";
+            document.getElementById('community').innerHTML = "Community XYZ";
+            document.getElementById('dob').innerHTML = "1990-01-01";
+            document.getElementById('religion').innerHTML = "Hindu";
+            document.getElementById('nationality').innerHTML = "Indian";
+            document.getElementById('bloodgroup').innerHTML = "A+";
+            document.getElementById('aadharno').innerHTML = "1234567890";
+            document.getElementById('language').innerHTML = "English";
+            document.getElementById('weight').innerHTML = "70";
+            document.getElementById('height').innerHTML = "175";
+            document.getElementById('birthplace').innerHTML = "Delhi";
+            document.getElementById('hobby').innerHTML = "Reading";
+            document.getElementById('rtecategory').innerHTML = "Yes";
+            document.getElementById('staffchild').innerHTML = "No";
+            document.getElementById('ews').innerHTML = "Yes";
+            document.getElementById('physicallychallenged').innerHTML = "No";
+            document.getElementById('fathername').innerHTML = "John Doe";
+            document.getElementById('fatherqualification').innerHTML = "Bachelor's Degree";
+            document.getElementById('fathermobileno').innerHTML = "+1234567890";
+            document.getElementById('fatheroccupation').innerHTML = "Engineer";
+            document.getElementById('fatherannualincome').innerHTML = "$50,000";
+            document.getElementById('mothername').innerHTML = "Jane Doe";
+            document.getElementById('motherqualification').innerHTML = "Bachelor's Degree";
+            document.getElementById('mothermobileno').innerHTML = "+1234567890";
+            document.getElementById('motheroccupation').innerHTML = "Engineer";
+            document.getElementById('motherannualincome').innerHTML = "$50,000";
+            document.getElementById('guardianname').innerHTML = "John Smith";
+            document.getElementById('guardianqualification').innerHTML = "Master's Degree";
+            document.getElementById('guardianmobileno').innerHTML = "+1234567890";
+            document.getElementById('guardianoccupation').innerHTML = "Doctor";
+            document.getElementById('guardianannualincome').innerHTML = "$100,000";
+            document.getElementById('contact').innerHTML = "+1234567890";
+            document.getElementById('address').innerHTML = "B-650, Mittal Market, 40 Feet Road, Hind Vihar, Prem Nagar-III, Kirari Delhi-86";
+        </script>
+</body>
+</html>

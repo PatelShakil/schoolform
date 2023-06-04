@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Admission Form</title>
+    <style>
+        /* Add your custom CSS styles here */
+    
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            font-family: Arial, sans-serif;
+        }
+    
+        .header-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    
+        .logo {
+            width: 80px;
+            height: 80px;
+            background-color: #ccc;
+            margin-right: 10px;
+        }
+    
+        .school-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    
+        .school-address {
+            font-size: 14px;
+            color: #888;
+        }
+    
+        .row {
+            display: flex;
+            align-items: center;
+        }
+    
+        .form-body-container {
+            margin-bottom: 20px;
+        }
+    
+        .form-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+    
+        .form-label {
+            width: 120px;
+            font-weight: bold;
+        }
+    
+        .form-value {
+            flex-grow: 1;
+        }
+    
+        .image-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+    
+        .image-row-item {
+            flex-grow: 1;
+        }
+    
+        .stack {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+        }
+    
+        .centered-label {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    
+        .form-row-line {
+            display: flex;
+            margin-bottom: 10px;
+        }
+    
+        .new-row {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+    
+        .parents-name-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    
+        .form-part-container {
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    
+<div class="form-container">
+    <div class="header-row">
+        <div class="logo"></div>
+        <div class="column">
+            <div class="school-name">
+                Gahak-Narulas Elementary School
+            </div>
+            <label class="school-address" style="margin-bottom: 10px;" id="address"></label>
+            <div class="row">
+                <label style="text-align: center; font-size: 15px; font-weight: bold;">Contact :</label>
+                <label class="school-contact" id="contact"></label>
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <!-- Mobile and Email -->
+
+    <div class="form-body-container">
+        <div class="image-row">
+            <div class="image-row-item">
+                <div class="column">
+                    <div class="form-row">
+                        <label class="form-label" for="name">First Name :</label>
+                        <label class="form-value" type="text" id="firstname">studentname</label>
+                    </div>
+                    <div class="form-row">
+                        <label class="form-label" for="name">Middle Name :</label>
+                        <label class="form-value" type="text" id="middlename">studentname</label>
+                    </div>
+                    <div class="form-row">
+                        <label class="form-label" for="name">Last Name :</label>
+                        <label class="form-value" type="text" id="lastname">studentname</label>
+                    </div>
+                    <div class="form-row">
+                        <label class="form-label" for="name">Class :</label>
+                        <label class="form-value" type="text" id="class">class</label>
+                        <span class="form-spacer"></span>
+                        <label class="form-value" type="text" id="section">section</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-label">Phone No. :</div>
+                        <div class="form-value" id="mobilenumber"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-label">Email :</div>
+                        <div class="form-value" id="email"></div>
+                    </div>
+                    <div class="form-row">
+                        <label for="" class="form-label" id="key">Admission No. :</label>
+                        <label for="" class="form-value" id="admissionno"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="image-row-item">
+                <div class="stack">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5IddEo4v2q0IiSOwomPKuW9MZir6McjitNw&usqp=CAU"
+                        alt="Add your Image" class="img">
+                </div>
+            </div>
+        </div>
+        <label class="centered-label">Personal Info</label>
+        <div class="item-3-row-container">
+            <!-- Personal Info -->
+            <div class="form-row-line">
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">Gender :</label>
+                    <label for="" class="form-value" id="gender"></label>
+                </div>
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">Community :</label>
+                    <label for="" class="form-value" id="community"></label>
+                </div>
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">DOB :</label>
+                    <label for="" class="form-value" id="dob"></label>
+                </div>
+            </div>
+
+            <div class="form-row-line">
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">Religion :</label>
+                    <label for="" class="form-value" id="religion"></label>
+                </div>
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">Nationality :</label>
+                    <label for="" class="form-value" id="nationality"></label>
+                </div>
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">Blood Group :</label>
+                    <label for="" class="form-value" id="bloodgroup"></label>
+                </div>
+            </div>
+            <div class="form-row-line">
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">Aadhar No. :</label>
+                    <label for="" class="form-value" id="aadharno"></label>
+                </div>
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">Language :</label>
+                    <label for="" class="form-value" id="language"></label>
+                </div>
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">Weight (KG) :</label>
+                    <label for="" class="form-value" id="weight"></label>
+                </div>
+            </div>
+            <div class="form-row-line">
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">Height (CM) :</label>
+                    <label for="" class="form-value" id="height"></label>
+                </div>
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">Birthplace :</label>
+                    <label for="" class="form-value" id="birthplace"></label>
+                </div>
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">Hobby :</label>
+                    <label for="" class="form-value" id="hobby"></label>
+                </div>
+            </div>
+            <div class="form-row-line">
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">RTE Category :</label>
+                    <label for="" class="form-value" id="rtecategory"></label>
+                </div>
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">Staff :</label>
+                    <label for="" class="form-value" id="staffchild"></label>
+                </div>
+                <div class="new-row">
+                    <label for="" class="form-label" id="key">EWS :</label>
+                    <label for="" class="form-value" id="ews"></label>
+                </div>
+            </div>
+        </div>
+        <div class="new-row" style="display: flex; align-items: center;">
+            <label for="" class="form-label" id="key">Differently Abled :</label>
+            <label for="" class="form-value" id="physicallychallenged"></label>
+        </div>
+        <label class="centered-label">Parents Info</label>
+        <div class="form-part-container">
+            <!-- Parents Info -->
+            <div class="parents-name-row">
+                <label for="" class="form-label" id="key">Father's Name :</label>
+                <label for="" class="form-value" id="fathername"></label>
+            </div>
+            <div class="form-row-line">
+                <div class="item-2-row">
+                    <label for="" class="form-label" id="key">Father's Qualification :</label>
+                    <label for="" class="form-value" id="fatherqualification"></label>
+                </div>
+                <div class="item-2-row">
+                    <label for="" class="form-label" id="key">Father's Mobile No. :</label>
+                    <label for="" class="form-value" id="fathermobileno"></label>
+                </div>
+            </div>
+            <div class="form-row-line">
+                <div class="item-2-row">
+                    <label for="" class="form-label" id="key">Father's Occupation :</label>
+                    <label for="" class="form-value" id="fatheroccupation"></label>
+                </div>
+                <div class="item-2-row">
+                    <label for="" class="form-label" id="key">Father's Annual Income :</label>
+                    <label for="" class="form-value" id="fatherannualincome"></label>
+                </div>
+            </div>
+            <div class="parents-name-row">
+                <label for="" class="form-label" id="key">Mother's Name :</label>
+                <label for="" class="form-value" id="mothername"></label>
+            </div>
+            <div class="form-row-line">
+                <div class="item-2-row">
+                    <label for="" class="form-label" id="key">Mother's Qualification :</label>
+                    <label for="" class="form-value" id="motherqualification"></label>
+                </div>
+                <div class="item-2-row">
+                    <label for="" class="form-label" id="key">Mother's Mobile No. :</label>
+                    <label for="" class="form-value" id="mothermobileno"></label>
+                </div>
+            </div>
+            <div class="form-row-line">
+                <div class="item-2-row">
+                    <label for="" class="form-label" id="key">Mother's Occupation :</label>
+                    <label for="" class="form-value" id="motheroccupation"></label>
+                </div>
+                <div class="item-2-row">
+                    <label for="" class="form-label" id="key">Mother's Annual Income :</label>
+                    <label for="" class="form-value" id="motherannualincome"></label>
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="" class="form-label" id="key">Guardian's Name :</label>
+                <label for="" class="form-value" id="guardianname"></label>
+            </div>
+            <div class="form-row">
+                <label for="" class="form-label" id="key">Guardian's Mobile No. :</label>
+                <label for="" class="form-value" id="guardianmobileno"></label>
+            </div>
+        </div>
+        <div class="new-row" style="display: flex; align-items: center;">
+            <label for="" class="form-label" id="key">Present Address :</label>
+            <label for="" class="form-value" id="presentaddress"></label>
+        </div>
+        <div class="new-row" style="display: flex; align-items: center;">
+            <label for="" class="form-label" id="key">Permanent Address :</label>
+            <label for="" class="form-value" id="permanentaddress"></label>
+        </div>
+        <div class="new-row" style="display: flex; align-items: center;">
+            <label for="" class="form-label" id="key">Transport Required :</label>
+            <label for="" class="form-value" id="transportrequired"></label>
+        </div>
+        <div class="new-row" style="display: flex; align-items: center;">
+            <label for="" class="form-label" id="key">Transport Mode :</label>
+            <label for="" class="form-value" id="transportmode"></label>
+        </div>
+        <div class="new-row" style="display: flex; align-items: center;">
+            <label for="" class="form-label" id="key">Siblings :</label>
+            <label for="" class="form-value" id="siblings"></label>
+        </div>
+        <div class="new-row" style="display: flex; align-items: center;">
+            <label for="" class="form-label" id="key">Remarks :</label>
+            <label for="" class="form-value" id="remarks"></label>
+        </div>
+    </div>
+    </div>
+        <script>
+            document.getElementById('firstname').innerHTML = "John";
+            document.getElementById('middlename').innerHTML = "Micheal";
+            document.getElementById('lastname').innerHTML = "Doe";
+            document.getElementById('class').innerHTML = "10";
+            document.getElementById('section').innerHTML = "(B)";
+            document.getElementById('mobilenumber').innerHTML = "1234567890";
+            document.getElementById('admissionno').innerHTML = "RPS/ABC/123";
+            document.getElementById('email').innerHTML = "student@gmail.com";
+            document.getElementById('gender').innerHTML = "Male";
+            document.getElementById('community').innerHTML = "Community XYZ";
+            document.getElementById('dob').innerHTML = "1990-01-01";
+            document.getElementById('religion').innerHTML = "Hindu";
+            document.getElementById('nationality').innerHTML = "Indian";
+            document.getElementById('bloodgroup').innerHTML = "A+";
+            document.getElementById('aadharno').innerHTML = "1234567890";
+            document.getElementById('language').innerHTML = "English";
+            document.getElementById('weight').innerHTML = "70";
+            document.getElementById('height').innerHTML = "175";
+            document.getElementById('birthplace').innerHTML = "Delhi";
+            document.getElementById('hobby').innerHTML = "Reading";
+            document.getElementById('rtecategory').innerHTML = "Yes";
+            document.getElementById('staffchild').innerHTML = "No";
+            document.getElementById('ews').innerHTML = "Yes";
+            document.getElementById('physicallychallenged').innerHTML = "No";
+            document.getElementById('fathername').innerHTML = "John Doe";
+            document.getElementById('fatherqualification').innerHTML = "Bachelor's Degree";
+            document.getElementById('fathermobileno').innerHTML = "+1234567890";
+            document.getElementById('fatheroccupation').innerHTML = "Engineer";
+            document.getElementById('fatherannualincome').innerHTML = "$50,000";
+            document.getElementById('mothername').innerHTML = "Jane Doe";
+            document.getElementById('motherqualification').innerHTML = "Bachelor's Degree";
+            document.getElementById('mothermobileno').innerHTML = "+1234567890";
+            document.getElementById('motheroccupation').innerHTML = "Engineer";
+            document.getElementById('motherannualincome').innerHTML = "$50,000";
+            document.getElementById('guardianname').innerHTML = "John Smith";
+            document.getElementById('guardianqualification').innerHTML = "Master's Degree";
+            document.getElementById('guardianmobileno').innerHTML = "+1234567890";
+            document.getElementById('guardianoccupation').innerHTML = "Doctor";
+            document.getElementById('guardianannualincome').innerHTML = "$100,000";
+            document.getElementById('contact').innerHTML = "+1234567890";
+            document.getElementById('address').innerHTML = "B-650, Mittal Market, 40 Feet Road, Hind Vihar, Prem Nagar-III, Kirari Delhi-86";
+        </script>
+</body>
+</html>
