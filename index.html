@@ -90,6 +90,11 @@
             border-bottom:2px solid #080808;
                 width: max-content;
         }
+        #name1{
+            width:150px;
+            border-top:none;
+            padding-left:56px;
+        }
     </style>
 
 </head>
@@ -147,7 +152,7 @@
         </div>
         <div class="detail-column">
             <p class="detail-text">
-                <strong>Name of Student : </strong> 
+                <strong>Name of Student : <input type:"text" id="name1"> </strong> 
                 <span class="detail-value"
                 id="firstname" ></span>
             </p>
@@ -156,7 +161,51 @@
                 <span class="detail-value"
                 id="dob" ></span>
             </p>
-            
+            <p class="detail-text">
+                <strong>Father's Name: : </strong> 
+                <span class="detail-value"
+                id="dob" ></span>
+            </p>
+             <p class="detail-text">
+                <strong>Mother's Name : </strong> 
+                <span class="detail-value"
+                id="mother's name" ></span>
+            </p>
+             <p class="detail-text">
+                <strong>Occupation : Father</strong> 
+                <span class="detail-value"
+                id="Occupation" ></span>
+            </p>
+             <p class="detail-text">
+                <strong>Education qualifuicataion of father: </strong> 
+                <span class="detail-value"
+                id="education" ></span>
+            </p>
+             <p class="detail-text">
+                <strong>Address :-Residental </strong> 
+                <span class="detail-value"
+                id="address" ></span>
+            </p>
+             <p class="detail-text">
+                <strong>phone no :-Residental <br> Office</strong> 
+                <span class="detail-value"
+                id="phone" ></span>
+            </p>
+              <p class="detail-text">
+                <strong>Name and address of guardian </strong> 
+                <span class="detail-value"
+                id="guardian" ></span>
+            </p>
+              <p class="detail-text">
+                <strong>Nationality: <br> Religion </strong> 
+                <span class="detail-value"
+                id="nationality" ></span>
+            </p>
+              <p class="detail-text">
+                <strong>Class in which admission sought </strong> 
+                <span class="detail-value"
+                id="class" ></span>
+            </p>
         </div>
 
     </div>
@@ -172,8 +221,7 @@
         document.getElementById('endyear').innerHTML = "24";
         document.getElementById('admissionno').innerHTML = "RPS/ABC/123";
         document.getElementById('firstname').innerHTML = "John";
-                document.getElementById('dob').innerHTML = "1990-01-01";
-document.getElementById('middlename').innerHTML = "Micheal";
+        document.getElementById('middlename').innerHTML = "Micheal";
         document.getElementById('lastname').innerHTML = "Doe";
         document.getElementById('class').innerHTML = "10";
         document.getElementById('section').innerHTML = "(B)";
@@ -181,6 +229,7 @@ document.getElementById('middlename').innerHTML = "Micheal";
         document.getElementById('email').innerHTML = "student@gmail.com";
         document.getElementById('gender').innerHTML = "Male";
         document.getElementById('community').innerHTML = "Community XYZ";
+        document.getElementById('dob').innerHTML = "1990-01-01";
         document.getElementById('religion').innerHTML = "Hindu";
         document.getElementById('nationality').innerHTML = "Indian";
         document.getElementById('bloodgroup').innerHTML = "A+";
